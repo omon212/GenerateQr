@@ -24,12 +24,16 @@ def salom_dunyo(value: str):
     assert response.ok, response.content
 
     result = response.json()
-    output_images = result['output']['output_images']
-    if output_images:
-        url = output_images[0]
+    print(result)
+    shortened_images = result['output']['output_images']
+    if shortened_images:
+        url = shortened_images[0]
     else:
         url = ""
 
+
+    # haqiqiy_url = url['output']['output_images']
+    # print(haqiqiy_url)
     html_content = f"""
             <!DOCTYPE html>
             <html lang="en">
