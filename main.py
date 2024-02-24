@@ -16,6 +16,7 @@ app.add_middleware(
 
 @app.get("/api/{value}")
 def salom_dunyo(value: str):
+
     payload = {
         "text_prompt": "Create Beautiful Qr code WebSite",
         "qr_code_data": f"{value}",
