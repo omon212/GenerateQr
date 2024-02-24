@@ -30,5 +30,6 @@ def salom_dunyo(value: str):
     )
 
     url = response.json()['url']
-    print(response.json())
-    return url
+    text_prompt = payload["text_prompt"]
+    print(f"{response.json()}\n\n\n\n\n\{text_prompt}")
+    return url, text_prompt
