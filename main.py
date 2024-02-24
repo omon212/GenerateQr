@@ -6,7 +6,6 @@ app = FastAPI()
 
 origins = ["*"]
 
-# Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -17,7 +16,6 @@ app.add_middleware(
 
 @app.get("/api/{value}")
 def salom_dunyo(value: str):
-
     payload = {
         "text_prompt": "Create Beautiful Qr code WebSite",
         "qr_code_data": f"{value}",
@@ -34,4 +32,3 @@ def salom_dunyo(value: str):
     url = response.json()['url']
     print(response.json())
     return url
-
