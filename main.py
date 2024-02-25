@@ -34,3 +34,9 @@ def salom_dunyo(value: str):
     text_prompt = payload["text_prompt"]
     print(f"{response.json()}\n\n\n\n\n\{text_prompt}")
     return url, text_prompt
+
+
+
+@app.get("/text/{value}")
+def textprompt(value: str):
+    return {"value": value}
